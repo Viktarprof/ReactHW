@@ -1,12 +1,12 @@
 import { useState } from "react"
 import ProductItem from "../ProductItem/ProductItem";
 import { data } from '../Data/data'
-import s from './Product.module.css'
+import s from './App.module.css'
 import Button from "../Button/Button"
 import {FiShoppingCart} from 'react-icons/fi'
 import {MdOutlineMapsHomeWork} from 'react-icons/md'
 
-function Product(){
+function App(){
 
     let [cards, setCards] = useState(data)
 
@@ -42,7 +42,8 @@ function Product(){
                             price = {el.price}
                             count = {el.count}
                             id = {el.id}
-                            onDoubleClick = {onDoubleClick}/>)}
+                            onDoubleClick = {onDoubleClick}
+                            />)}
             </div >
 
             <div onClick={addCard}>
@@ -56,7 +57,7 @@ function Product(){
         </div>
     )
 }
-export default Product
+export default App
 
 
 
