@@ -1,0 +1,61 @@
+.weeks_container{
+    width: 1088px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.weekDay{
+    width: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #34495E;
+    color: #ffffff;
+    border-radius: 10px 0px 0px 10px;
+    font-size: 40px; 
+}
+.subjects{
+    width: 1000px;
+    padding: 12px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    grid-template-rows: auto;
+    align-items: center;
+    column-gap: 15px;
+    row-gap: 15px;
+  
+ 
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+.close_btn{
+    height: 28px;
+    width: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    top: -11px;
+    right: -11px;
+
+    background-color: #e74c3c;
+   
+    border: 1px solid black;
+    border-radius: 50%;
+  
+    font-size: 20px;
+    
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.weeks_container:hover .close_btn {
+    opacity: 1;
+}

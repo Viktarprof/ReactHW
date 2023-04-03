@@ -1,0 +1,9 @@
+.cards_container{
+    width: 1088px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 23px;
+}

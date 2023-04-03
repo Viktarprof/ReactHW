@@ -1,10 +1,14 @@
 import { useState } from "react";
 import s from "./ProductItem.module.css";
 
-function ProductItem(props) {
-    const { name, price, count, id, onDoubleClick, sumProd } = props;
-    const [num, setNum] = useState(count);
+function ProductItem( props ) {
+    const { name, price, count, id, onDoubleClick, addCToCart } = props;
 
+    const [num, setNum] = useState(count);// считаем каунт
+    console.log(id);
+
+  
+    
     const colorNum = {
         color: num <= 0 ? "red" : "lightgreen"
     };
@@ -12,7 +16,7 @@ function ProductItem(props) {
     const handleDec = (e) => {
         e.stopPropagation();
             if (num <= 0) {
-                setNum(1);
+                setNum(0);
             } else {
                 setNum(num - 1);
             }
@@ -25,32 +29,33 @@ function ProductItem(props) {
 
     return (
         <div>
-            <div onDoubleClick={() => onDoubleClick(id)} className={s.card}>
-                <span className={s.span}>
+            <div onDoubleClick = {() => onDoubleClick(id)} className={s.card} >
+                <span className = {s.span}>
                     <p>{name}</p>
                     <p>Price: {price * num}</p>
-                        <span className={s.triggers}>
+                        <div className = {s.triggers}>
                             <button 
-                                onClick={handleDec} 
+                                onClick = {handleDec} 
                                 onDoubleClick={(e) => e.stopPropagation()} 
-                                className={s.triggersBtn}> 
+                                className = {s.triggersBtn}> 
                             - 
                             </button>
-                                <p style={colorNum}>{num}</p>
+                                <p style = {colorNum}>{num}</p>
                             <button 
-                                onClick={handleInc} 
-                                onDoubleClick={(e) => e.stopPropagation()} 
+                                onClick = {handleInc} 
+                                onDoubleClick = {(e) => e.stopPropagation()} 
                                 className={s.triggersBtn}> 
                             +
                             </button>
-                        </span>
+                        </div>
                 </span>
+                
             </div>
-        <button 
-            onClick={() => sumProd(num)} 
-            className={s.BtnShopCart}>
-            Заказать
-        </button>
+            <button 
+                    onClick = {() => addCToCart(num)} 
+                    className = {s.BtnShopCart}>
+                    Добавить в корзину
+                </button>
         </div>
     );
     }

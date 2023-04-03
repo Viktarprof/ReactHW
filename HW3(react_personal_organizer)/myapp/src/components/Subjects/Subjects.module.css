@@ -1,0 +1,38 @@
+.card_item{
+    width: 280px;
+    height: 47px;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.close_btn{
+    height: 28px;
+    width: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    top: -11px;
+    right: -11px;
+
+    background-color: #e74c3c;
+   
+    border: 1px solid black;
+    border-radius: 50%;
+  
+    font-size: 20px;
+    
+    opacity: 0;
+    transition: opacity 0.8s ease;
+} 
+.card_item:hover .close_btn{ 
+    opacity: 1;
+}
