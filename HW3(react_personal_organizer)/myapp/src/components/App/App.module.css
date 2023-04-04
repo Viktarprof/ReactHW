@@ -3,12 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     margin: 50px;
     display: flex;
     justify-content: center;
-    
-
     background-color: #1ABC9C;
 }
 
@@ -18,3 +17,12 @@ body{
     justify-items: center;
     align-items: center;
 }
+
+@media(width <= 1088px){
+    .container{
+        width: 390px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+

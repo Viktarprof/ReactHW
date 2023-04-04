@@ -7,3 +7,11 @@
     justify-content: space-around;
     gap: 23px;
 }
+@media(width <= 1088px){
+    .cards_container{
+        width: 390px;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+}

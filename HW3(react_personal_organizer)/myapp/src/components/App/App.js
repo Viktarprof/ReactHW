@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import s from './App.module.css';
 import Formsubject from '../Formsubject/Formsubject';
 import SubjectContainer from '../SubjectContainer/SubjectContainer';
@@ -9,7 +9,8 @@ function App(){
   let [days, setDays] = useState([]);
   let [subjects, setCardsSubjects] = useState([]);
 
-
+   
+//=============================
   const submit_form = event => {
     event.preventDefault();
     let { day, importance, description } = event.target;
@@ -57,6 +58,27 @@ function App(){
         return el
       }))
   }
+
+    //useEffect + localStorage
+    useEffect(() => {
+      let dayItem = JSON.parse(localStorage.getItem('days'))
+      setDays(dayItem)
+    },[])
+
+    useEffect(() => {
+      localStorage.setItem('days', JSON.stringify(days))
+    },[days])
+
+
+    useEffect(() => {
+      let subjectsItem = JSON.parse(localStorage.getItem('subjects'))
+      setCardsSubjects(subjectsItem)
+    },[])
+
+    useEffect(() => {
+      localStorage.setItem('subjects', JSON.stringify(subjects))
+    },[subjects])
+
 
 
     return(

@@ -33,6 +33,13 @@
     opacity: 0;
     transition: opacity 0.8s ease;
 } 
+
 .card_item:hover .close_btn{ 
     opacity: 1;
+}
+
+@media(width <= 1088px){
+    .card_item{
+        width: 257px;
+    }
 }

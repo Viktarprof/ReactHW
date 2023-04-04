@@ -4,6 +4,7 @@
     justify-content: space-between;
     position: relative;
 }
+
 .weekDay{
     width: 90px;
 
@@ -16,6 +17,7 @@
     border-radius: 10px 0px 0px 10px;
     font-size: 40px; 
 }
+
 .subjects{
     width: 1000px;
     padding: 12px;
@@ -27,7 +29,6 @@
     column-gap: 15px;
     row-gap: 15px;
   
- 
     background-color: rgb(255, 255, 255);
     border-radius: 0 10px 10px 0;
     cursor: pointer;
@@ -58,4 +59,20 @@
 
 .weeks_container:hover .close_btn {
     opacity: 1;
+}
+
+@media(width <= 1088px){
+    .weeks_container{
+        width: 380px;
+        display: flex;
+        justify-content: center
+    }
+    .weekDay{
+        width: 80px;
+    }
+    .subjects{
+        width: 280px;
+        display: grid;
+        grid-template-columns: 280px;
+    }
 }
