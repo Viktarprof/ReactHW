@@ -42,12 +42,13 @@ function App(){
       // console.log(numDay)
       // console.log(days);
     }
-  //удаление задачи
-    const deleteSubject = (numId) => {
+  // удаление задачи
+    const deleteSubject = ( numId) =>
       setCardsSubjects(subjects.filter((el) => el.id !== numId))
       // console.log(numId)
       // console.log(subjects);
-    }
+
+    
 
   //замена важности
   const chengeImportance = (numId) => {

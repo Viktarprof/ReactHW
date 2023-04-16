@@ -2,7 +2,9 @@ import React from 'react'
 import s from './Subjects.module.css'
 import Button from '../Button/Button'
 
-function Subjects ({id, importance, description, deleteSubject, chengeImportance}){
+function Subjects ({id, days, importance, description, deleteSubject, chengeImportance}){
+    console.log(days);
+    console.log(id);
 
     const style = {
         backgroundColor: importance === "0" ? '#e74c3c' : '#1abc9c'}

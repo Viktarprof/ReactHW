@@ -3,8 +3,8 @@ import s from './WeeksDay.module.css'
 import Subjects from '../Subjects/Subjects';
 import Button from '../Button/Button';
 
-function WeeksDay({day, subjects, deleteDay, deleteSubject, chengeImportance}){
-
+function WeeksDay({days, day, subjects, deleteDay, deleteSubject, chengeImportance}){
+console.log(day);
     const week = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'] // принять в индекс полученное число от days  => строка 15
 
     subjects.sort((a,b) => +a.importance - +b.importance) //+ string -> num
@@ -21,7 +21,7 @@ function WeeksDay({day, subjects, deleteDay, deleteSubject, chengeImportance}){
                     if(el.day === day){
                         return <Subjects
                         key = {index} 
-                
+                        days={el.day}
                         id = {el.id} 
                         importance = {el.importance}
                         description = {el.description} 
