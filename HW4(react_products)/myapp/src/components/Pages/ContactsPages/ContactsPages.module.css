@@ -1,6 +1,6 @@
 .contacts_container{
     width: 100%;
-    height: 500px;
+    height: 100vh;
     background-color:#eaf4d5;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,4 @@
 .contacts_text{
     width: 800px;
     text-align: justify;
-}
-.contact_info{
-    
 }

@@ -5,7 +5,8 @@ function HomePages() {
   return (
     <div className={s.home_container}>
         <div className={s.home_text}>
-        <marquee behavior="scroll" direction="left">Добро пожаловать в наш онлайн магазин!</marquee>
+        <marquee behavior="scroll" direction="left">Ссылка на код в index.html</marquee>
+        Добро пожаловать в наш онлайн магазин!
           <br/>
           <br/>
           Мы предлагаем широкий выбор качественных товаров по доступным ценам. У нас вы найдете все, что нужно для комфортной и удобной жизни: от бытовой техники и электроники до товаров для дома и сада, одежды и обуви, игрушек и многое другое.

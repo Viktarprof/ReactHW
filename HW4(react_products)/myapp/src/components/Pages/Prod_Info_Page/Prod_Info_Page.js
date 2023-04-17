@@ -8,7 +8,7 @@ import s from './Prod_Info_Page.module.css'
 function Prod_Info_Page() {
 
   
-  let [products, setProducts] = useState([])
+  let [products, setProducts] = useState({})
   let {id} = useParams()
 
 
