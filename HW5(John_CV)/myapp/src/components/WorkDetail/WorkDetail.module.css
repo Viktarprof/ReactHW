@@ -1,0 +1,106 @@
+.work_item {
+  display: flex;
+  gap: 18px;
+  margin: 31px 0 25px 0;
+}
+.work_item img {
+  width: 246px;
+  height: 180px;
+
+  border-radius: 6px;
+}
+.wokr_info {
+  height: 180px;
+
+  display: flex;
+  flex-direction: column;
+}
+.year_tags {
+  width: 180px;
+  height: 30px;
+  margin-bottom: 5px;
+
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.year {
+  width: 62px;
+  height: 25px;
+
+  text-align: center;
+
+  border-radius: 16px;
+
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+
+  color: #ffffff;
+  background: #142850;
+}
+.tags {
+  color: #8695a4;
+
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 29px;
+}
+.title {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #21243d;
+}
+
+.line {
+  width: 858px;
+  border: 1px solid #e0e0e0;
+  margin-top: 30px;
+}
+
+@media (max-width: 820px) {
+  .work_item {
+    width: 600px;
+  }
+
+  .line {
+    width: 600px;
+  }
+}
+
+@media (max-width: 390px) {
+  .work_item {
+    width: 340px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .work_item img {
+    width: 340px;
+    height: 230px;
+
+    border-radius: 6px;
+  }
+
+  .wokr_info {
+    height: 130px;
+  }
+
+  .wokr_info h2 {
+    font-family: "Heebo";
+    font-style: normal;
+
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

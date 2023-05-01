@@ -1,0 +1,174 @@
+.work {
+  width: 1100px;
+
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.title_card {
+  width: 680px;
+  margin: 90px 0 0 0;
+
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 50px;
+
+  color: #21243d;
+}
+
+.year_tags {
+  width: 680px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.year_tags p:nth-child(1) {
+  width: 62px;
+  height: 20px;
+
+  color: white;
+  background: #ff7c7c;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 60px;
+}
+.year_tags p:nth-child(2) {
+  width: 374px;
+  margin: 0;
+
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 29px;
+
+  color: #21243d;
+}
+
+.text {
+  width: 681px;
+  height: 44px;
+  margin: 0;
+
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content_h1 {
+  width: 690px;
+  height: 45px;
+  margin: 0;
+
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 60px;
+
+  color: #21243d;
+}
+
+.content_h2 {
+  width: 500px;
+  height: 50px;
+  margin: 0;
+
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 60px;
+}
+
+.work_image {
+  width: 681px;
+  height: 460px;
+}
+
+.content_text {
+  width: 677px;
+  height: 48px;
+  margin: 0;
+
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 720px) {
+  .work,
+  .title_card,
+  .year_tags,
+  .text,
+  .content,
+  .content_h1,
+  .content_h2,
+  .content_text,
+  .work_image {
+    width: 500px;
+  }
+  .work_image {
+    width: 500px;
+    height: 345px;
+  }
+}
+@media (max-width: 390px) {
+  .title_card {
+    width: 680px;
+    margin: 10px 0 0 0;
+  }
+
+  .work {
+    margin-top: 10px;
+    margin-bottom: 60px;
+  }
+  .work,
+  .title_card,
+  .year_tags,
+  .text,
+  .content,
+  .content_h1,
+  .content_h2,
+  .content_text {
+    width: 350px;
+  }
+
+  .content {
+    margin-top: 20px;
+  }
+  .content_h1 {
+    height: 40px;
+    line-height: 24px;
+  }
+  .work_image {
+    width: 350px;
+    height: 250px;
+  }
+}

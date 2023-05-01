@@ -15,6 +15,7 @@
 }
 
 .star{
+    z-index: 0;
     margin: 10px;
     size:30px;
     color: #ffc107;

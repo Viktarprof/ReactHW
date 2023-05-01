@@ -1,0 +1,37 @@
+.work_detail_container {
+  margin: 50px 0 83px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.title_work {
+  width: 830px;
+  height: 60px;
+
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 60px;
+
+  color: #21243d;
+}
+
+@media (max-width: 850px) {
+  .title_work {
+    width: 600px;
+  }
+}
+@media (max-width: 390px) {
+  .title_work {
+    width: 350px;
+    height: 30px;
+    text-align: center;
+  }
+  .work_detail_container {
+    margin: 0;
+  }
+}

@@ -21,15 +21,23 @@ function Prod_Info_Page() {
 
 
   const stars = [];
-  if (products.rating && products.rating.rate) { // проверяем наличие свойства 'rating' и 'rate' в объекте "products"
     for(let i = 1; i <= 5; i++){
-      if(i <= Math.round(products.rating.rate)){
+      if(i <= Math.round(products.rating?.rate)){
         stars.push(<FaStar key={i} className={s.star} />);
       } else {
         stars.push(<FaStar key={i} className={s.emptyStar} />);
       }
     }
-  }
+    // const stars = [];
+    // if (products.rating && products.rating.rate) { // проверяем наличие свойства 'rating' и 'rate' в объекте "products"
+    // for(let i = 1; i <= 5; i++){
+    //   if(i <= Math.round(products.rating.rate)){
+    //     stars.push(<FaStar key={i} className={s.star} />);
+    //   } else {
+    //     stars.push(<FaStar key={i} className={s.emptyStar} />);
+    //   }
+    // }
+    // }
 
   const styles = {color: products.price > 100 ? '#ff5561' : '#28ca41'}
 

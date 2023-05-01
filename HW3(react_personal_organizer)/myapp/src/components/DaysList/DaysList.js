@@ -1,30 +1,28 @@
-import React from 'react'
-import Tasks from '../Tasks/Tasks';
+import DayItem from "../DayItem/DayItem"
+import s from './DayList.module.css'
 
-function DaysList({day, tasks}) {
-    const dayWeek = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС']
-    
-    console.log(day);
-    console.log(tasks);
-  return (
-    <div>
-        <div>
-            <p>{dayWeek[day]}</p>
+
+function DaysList(props){
+
+    const {tasks, deleteDay, deleteTask} = props
+    const daysList = ['ПНД','ВТ','СР','ЧТ','ПТ','СБ','ВСК']
+
+    return(
+        <div className="container"> 
+            {tasks.map((elem,i) => 
+                <div key={i} className={s.day_item_elem}>
+                    <h2>{daysList[elem.day]}</h2>
+                    <DayItem 
+                        day={elem.day} 
+                        tasksByDay={elem.tasksByDay} 
+                        deleteDay ={deleteDay}
+                        deleteTask={deleteTask}
+                        />
+                </div>
+                )}
         </div>
-        <div>
-            {tasks.map((el, index) => {
-               if(+el.day === +day){
-                return <Tasks
-                    key = {index}
-                    id = {el.id}
-                    important = {el.important}
-                    desriptions = {el.desriptions}
-                    />
-                }
-            })}
-        </div>
-    </div>
-  )
+    )
 }
+
 
 export default DaysList

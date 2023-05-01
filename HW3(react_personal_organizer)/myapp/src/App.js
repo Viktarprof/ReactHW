@@ -1,45 +1,62 @@
-import React, { useState } from 'react'
-import Forms from './components/Forms/Forms'
-import TasksList from './components/TasksList/TasksList';
+import { useState } from "react";
+import Form from "./components/Form/Form";
+import DaysList from "./components/DaysList/DaysList";
+import './App.css'
 
 function App() {
-  const [tasks, setTasks] = useState([]);
-  const [days, setDays] = useState([])
 
-  const submit_form = (event) => {
-    event.preventDefault();
-    let { day, important, desriptions} = event.target;
+  let [tasks, setTasks] = useState([])
 
-    const newTask = {
-      id: Date.now(),
-      day: +day.value,
-      important: +important.value,
-      desriptions: desriptions.value
-    }
-    setTasks([...tasks, newTask])
 
-    
+  const addNewTask = (newTask) => {
+    let copyTasks = [...tasks]
+    let findDay = copyTasks.findIndex(elem => elem.day === newTask.day)
 
-    if(!days.includes(day.value)){
-
-      setDays([...days, day.value])
+    if (findDay >= 0){
+      copyTasks[findDay].tasksByDay.push({...newTask})
+    } else {
+      copyTasks.push({day: newTask.day, tasksByDay: [{...newTask}]})
     }
 
+    // Сортировка по дням недели
+    copyTasks.sort((a,b) => a.day - b.day)
 
-    day.value = ''
-    important.value = ''
-    desriptions.value = ''
+    // Сортировку по важности
+    copyTasks.forEach(elem => {
+      elem.tasksByDay.sort((a,b) => a.importance - b.importance)
+    })
+
+    console.log(tasks)
+    setTasks(copyTasks)
   }
 
-  days.sort((a,b) => +a - +b)
+  const deleteDay = (day) => {
+    setTasks(tasks.filter(elem => elem.day != day))
+  }
+
+  const deleteTask = (day, id) => {
+    let copyTasks = tasks.map(elem => {
+      if (elem.day == day){
+        elem.tasksByDay = elem.tasksByDay.filter(elem => elem.id != id)
+      }
+      return elem
+    })
+
+    // Фильттрация стейта в случае, если задач не будет (автоматическое удаление пустого дня)
+    copyTasks = copyTasks.filter(elem => elem.tasksByDay.length != 0)
+
+    setTasks(copyTasks)
+    
+  }
   return (
     <div>
-       <Forms submit_form = {submit_form}/>
-       <TasksList
-                tasks = {tasks}
-                days = {days}/>
+      <Form addNewTask={addNewTask}/>
+      <DaysList  
+        deleteDay={deleteDay} 
+        deleteTask = {deleteTask}
+        tasks={tasks}/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

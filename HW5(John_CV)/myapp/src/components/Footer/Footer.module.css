@@ -1,0 +1,39 @@
+.fotter {
+  height: 182px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+}
+.sotial_icons {
+  display: flex;
+  gap: 36px;
+
+  font-size: 30px;
+}
+
+.sotial_icons a {
+  gap: 36px;
+  color: black;
+}
+
+.developer {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
+
+@media (max-width: 390px) {
+  .fotter {
+    gap: 10px;
+  }
+  .sotial_icons {
+    height: 30px;
+    font-size: 40px;
+  }
+}
