@@ -1,0 +1,47 @@
+.work{
+    display: flex;
+
+    font-family: "Heebo";
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+}
+.infoWork{
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+
+    font-family: "Heebo";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+}
+.infoWork p{
+    width: 400px;
+    text-align: justify;
+}
+.education{
+    display: flex;
+}
+.education p{
+    width: 180px;
+}
+.infoEducation{
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+.infoEducation p{
+    width: 400px;
+    
+    text-align: justify;
+    font-family: "Heebo";
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+}
