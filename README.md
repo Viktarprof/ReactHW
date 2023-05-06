@@ -4,4 +4,5 @@
 - [HW3](https://viktarprof.github.io/ReactHW/HW3(react_personal_organizer))
 - [HW4](https://viktarprof.github.io/ReactHW/HW4(react_products))
 - [HW5](https://viktarprof.github.io/ReactHW/HW5(John_CV))
+- [HW6](https://viktarprof.github.io/ReactHW/Еврокран/index.html)
 
