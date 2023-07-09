@@ -1,0 +1,160 @@
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+}
+.cartContainer h2 {
+  width: 1400px;
+  margin: 0px 0 16px 0;
+  text-align: left;
+  font-weight: 700;
+  font-size: 40px;
+}
+.toBackStore {
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+  cursor: pointer;
+}
+
+.testCONTAINER {
+  width: 825px;
+}
+
+.orderContainer {
+  margin-bottom: 140px;
+  display: flex;
+  justify-content: space-between;
+}
+.stickyOrderDetail {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+.orderDetail {
+  width: 496px;
+  height: 393px;
+
+  border: 2px solid #000000;
+  border-radius: 21px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.orderDetail p:nth-child(1) {
+  width: 450px;
+  height: 36px;
+  margin: 20px 0 40px 0;
+  text-align: left;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+}
+.total {
+  width: 446px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.total p:nth-child(1) {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.total p:nth-child(2) {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(144, 219, 158, 0.5); 
+  backdrop-filter: blur(5px); 
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 30px;
+
+  background-color: #fff;
+
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 1200px){
+  .cartContainer,
+  .cartContainer h2{
+    width: 100%;
+  }
+}
+@media (max-width: 1000px){
+  .orderContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .testCONTAINER{
+    width:500px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .warning {
+    width: 390px;
+    text-align: center;
+    margin: 20px 0 40px 0;
+  }
+  .stickyOrderDetail {
+    position: static;
+  }
+}
+@media (max-width: 500px){
+  .cartContainer h2{
+    text-align: center;
+  }
+  .testCONTAINER{
+    width:380px;
+  }
+  .total {
+    width: 330px;
+  }
+  .orderDetail {
+    width: 370px;
+    height: 375px;
+  }
+  .orderDetail p:nth-child(1) {
+    width: 350px
+  }
+}
+@media (max-width: 390px){
+  .orderDetail {
+    width: 370px;
+    height: 375px;
+  }
+  .orderDetail p:nth-child(1) {
+    width: 350px
+  }
+  .cartContainer h2{
+    margin: 80px 0 80px 0;
+  }
+}

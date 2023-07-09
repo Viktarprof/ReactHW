@@ -1,0 +1,104 @@
+.filterContainer {
+  width: 1100px;
+  height: 60px;
+  margin-bottom: 60px;
+
+  display: flex;
+  align-items: center;
+}
+
+.price,
+.sorted,
+.discounted {
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.price {
+  gap: 15px;
+  margin-right: 40px;
+}
+
+.discounted,
+.sorted {
+  gap: 40px;
+  margin-right: 90px;
+}
+.price input {
+  width: 103px;
+  height: 40px;
+
+  padding: 10px;
+
+  border: 1px solid #000000;
+  border-radius: 7px;
+}
+.discounted input {
+  width: 40px;
+  height: 40px;
+
+  padding: 10px;
+
+  border: 1px solid #000000;
+  border-radius: 7px;
+}
+.sorted select {
+  width: 219px;
+  height: 40px;
+  padding: 10px;
+
+  border: 1px solid #000000;
+  border-radius: 7px;
+
+  appearance: none;
+  overflow: hidden;
+  background: url("./media/arrows.png") no-repeat right;
+  background-position: calc(100% - 10px);
+}
+@media (max-width: 1000px) {
+  .filterContainer {
+    width: 900px;
+  }
+}
+
+@media (max-width: 900px) {
+  .filterContainer {
+    /* width: 450px; */
+    width: 350px;
+    height: 150px;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .price {
+    gap: 36px;
+  }
+  .discounted {
+    gap: 105px;
+  }
+
+  .price,
+  .discounted,
+  .sorted {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .filterContainer {
+    width: 380px;
+    height: 150px;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: center;
+    gap: 20px;
+  }
+}
